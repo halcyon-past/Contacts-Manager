@@ -14,7 +14,7 @@ const getContacts = asyncHandler(async (req,res) => {
 //@access Public
 const createContact = asyncHandler(async (req,res) => {
     console.log(`The request body is: ${JSON.stringify(req.body)}`);
-    const {name,email,phone,type} = req.body;
+    const {name,email,phone} = req.body;
     if (!name || !email || !phone) {
         res.status(400);
         throw new Error("All Fields are Required");
